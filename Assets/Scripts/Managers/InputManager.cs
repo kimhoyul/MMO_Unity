@@ -1,16 +1,35 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager
 {
     public Action KeyAction = null;
+    public Action<Define.MouseEvent> MouseAction = null;
+
+    bool _pressed = false;
 
     public void OnUpdate()
     {
-        if (Input.anyKey == false)
-            return;
+        if (EventSystem.current.IsPointerOverGameObject())
+			return;
 
-        if (KeyAction != null)
+        if (Input.anyKey && KeyAction != null)
             KeyAction.Invoke();
+
+        if (MouseAction != null)
+        {
+            if (Input.GetMouseButton(0))
+            {
+                MouseAction.Invoke(Define.MouseEvent.PRESS);
+				_pressed = true;
+			}
+			else
+            {
+                if (_pressed)
+                    MouseAction.Invoke(Define.MouseEvent.CLICK);
+                _pressed = false;
+			}
+		}
     }
 }
