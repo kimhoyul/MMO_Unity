@@ -11,14 +11,19 @@ public class ResourceManager
 
     public GameObject Instantiate(string path, Transform parent = null)
     {
+        // TODO: original  이미 들고 있으면 바로 사용 가능
         GameObject prefab = Load<GameObject>($"Prefabs/{path}");
         if (prefab == null)
         {
 			Debug.Log($"Failed to load prefab : {path}");
             return null;
 		}
+
+        // TODO: 혹시 풀링된 애가 있으면 가져와서 사용
+        GameObject go = Object.Instantiate(prefab, parent);
+        go.name = prefab.name;
         
-        return Object.Instantiate(prefab, parent);
+        return go;
     }
 
     public void Destroy(GameObject go) 
@@ -26,6 +31,7 @@ public class ResourceManager
         if (go == null)
             return;
 
+        // TODO: 풀링된 애면 풀매니저에게 반납
         Object.Destroy(go);
     }
 }

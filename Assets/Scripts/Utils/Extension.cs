@@ -5,9 +5,14 @@ using UnityEngine.EventSystems;
 public static class Extension
 {
 	#region UI
-	public static void AddUIEvent(this GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.CLICK)
+	public static T GetOrAddComponent<T>(this GameObject go) where T : UnityEngine.Component
 	{
-		UI_Base.AddUIEvent(go, action, type);
+		return Util.GetOrAddComponent<T>(go);
+	}
+
+	public static void BindEvent(this GameObject go, Action<PointerEventData> action, Define.UIEvent type = Define.UIEvent.CLICK)
+	{
+		UI_Base.BindEvent(go, action, type);
 	}
 	#endregion UI
 }
