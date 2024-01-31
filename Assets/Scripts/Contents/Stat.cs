@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Stat : MonoBehaviour
@@ -26,5 +24,27 @@ public class Stat : MonoBehaviour
         _attack = 10;
         _defence = 5;
         _moveSpeed = 5.0f;
+	}
+
+    public virtual void OnAttacked(Stat attack) 
+    {
+        int damage = Mathf.Max(0, attack.Attack - Defense);
+		Hp -= damage;
+		if (Hp <= 0)
+        {
+			Hp = 0;
+			OnDead(attack);
+		}
+    }
+
+	protected virtual void OnDead(Stat attack)
+	{
+		PlayerStat playerStat = attack as PlayerStat;
+		if (playerStat != null)
+		{
+			playerStat.Exp += 5;
+		}
+
+		Managers.Game.Despawn(gameObject);
 	}
 }
