@@ -6220,7 +6220,7 @@ GameObject:
   - component: {fileID: -3927214592043849665}
   - component: {fileID: 6523625149234991176}
   m_Layer: 0
-  m_Name: Low Poly Warrior
+  m_Name: Warrior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

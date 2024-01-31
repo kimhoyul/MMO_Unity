@@ -10,7 +10,7 @@ public abstract class UI_Base : MonoBehaviour
 
 	public abstract void Init();
 
-	private void Awake()
+	private void Start()
 	{
 		Init();
 	}

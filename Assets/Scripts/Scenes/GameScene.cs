@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using UnityEngine;
 
+[RequireComponent(typeof(GameScene))]
+[RequireComponent(typeof(CursorController))]
 public class GameScene : BaseScene
 {
 	protected override void Init()

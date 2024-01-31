@@ -15,7 +15,7 @@ public class Stat : MonoBehaviour
     public int Hp { get { return _hp; } set { _hp = value; } }
     public int MaxHp { get { return _maxHp; } set { _maxHp = value; } }
     public int Attack { get { return _attack; } set { _attack = value; } }
-    public int Defence { get { return _defence; } set { _defence = value; } }
+    public int Defense { get { return _defence; } set { _defence = value; } }
     public float MoveSpeed { get { return _moveSpeed; } set { _moveSpeed = value; } }
 
     private void Start()
