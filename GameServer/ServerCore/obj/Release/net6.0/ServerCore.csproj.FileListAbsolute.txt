@@ -1,0 +1,15 @@
+E:\UN\MMO_Unity\GameServer\ServerCore\bin\Release\net6.0\ServerCore.exe
+E:\UN\MMO_Unity\GameServer\ServerCore\bin\Release\net6.0\ServerCore.deps.json
+E:\UN\MMO_Unity\GameServer\ServerCore\bin\Release\net6.0\ServerCore.runtimeconfig.json
+E:\UN\MMO_Unity\GameServer\ServerCore\bin\Release\net6.0\ServerCore.dll
+E:\UN\MMO_Unity\GameServer\ServerCore\bin\Release\net6.0\ServerCore.pdb
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.csproj.AssemblyReference.cache
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.AssemblyInfoInputs.cache
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.AssemblyInfo.cs
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.csproj.CoreCompileInputs.cache
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.dll
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\refint\ServerCore.dll
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.pdb
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ServerCore.genruntimeconfig.cache
+E:\UN\MMO_Unity\GameServer\ServerCore\obj\Release\net6.0\ref\ServerCore.dll

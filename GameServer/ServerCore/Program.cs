@@ -2,22 +2,24 @@
 {
 	internal class Program
 	{
-		static void MainThread()
-		{
-			while (true)
-				Console.WriteLine("Hello Thread!");
-        }
-
 		static void Main(string[] args)
 		{
-			Thread thread = new Thread(MainThread);
-			thread.Name = "Test Thread";
-			thread.Start();
-			Console.WriteLine("Waiting for Thread");
+			int count = 0;
+			while(true)
+			{
+				count++;
+				x = y = r1 = r2 = 0;
 
+				Task t1 = new Task(Thread_1);
+				Task t2 = new Task(Thread_2);
+				t1.Start();
+				t2.Start();
 
-			thread.Join();
-			Console.WriteLine("Hello World");
-		}
+				Task.WaitAll(t1, t2);
+				if (r1 == 0 && r2 == 0)
+					break;
+			}
+            Console.WriteLine($"{count}번만에 빠져나옴");
+        }
 	}
 }
